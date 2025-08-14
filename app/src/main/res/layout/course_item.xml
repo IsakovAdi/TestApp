@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin16"
+    android:layout_marginBottom="@dimen/margin16"
+    android:backgroundTint="@color/searchViewBgColor"
+    app:cardCornerRadius="@dimen/size16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_card"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size114"
+            app:cardCornerRadius="@dimen/margin12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foregroundGravity="bottom"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/has_like_flag"
+            android:layout_width="@dimen/size28"
+            android:layout_height="@dimen/size28"
+            android:layout_margin="@dimen/margin8"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/viewsGreyBg"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="@dimen/margin6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/has_like_flag_img_false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_favorites" />
+
+            <ImageView
+                android:id="@+id/has_like_flag_img_true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_bookmark_fill"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rating_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin8"
+            android:background="@drawable/search_view_bg"
+            android:backgroundTint="@color/viewsGreyBg"
+            app:layout_constraintBottom_toBottomOf="@id/image_card"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="@dimen/size0"
+                android:layout_height="@dimen/size0"
+                android:layout_marginStart="@dimen/margin8"
+                android:layout_marginEnd="@dimen/margin4"
+                android:src="@drawable/icon_star_fill"
+                app:layout_constraintBottom_toBottomOf="@id/rating_text"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@id/rating_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rating_text" />
+
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin6"
+                android:layout_marginEnd="@dimen/margin8"
+                android:fontFamily="@font/roboto_medium"
+                android:textFontWeight="400"
+                android:textSize="@dimen/textSize12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="4.9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size0"
+            android:background="@drawable/search_view_bg"
+            android:backgroundTint="@color/viewsGreyBg"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/rating_view"
+            app:layout_constraintStart_toEndOf="@id/rating_view"
+            app:layout_constraintTop_toTopOf="@id/rating_view">
+
+            <TextView
+                android:id="@+id/start_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin8"
+                android:fontFamily="@font/roboto_medium"
+                android:textFontWeight="400"
+                android:textSize="@dimen/textSize12"
+                tools:text="22 Мая 2024" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/course_title"
+            style="@style/regularTextStyle"
+            android:layout_width="@dimen/size0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_card"
+            tools:text="Java-разработчик с нуля" />
+
+        <TextView
+            android:id="@+id/course_desc_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin12"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="2"
+            android:textColor="@color/textColorSecondary"
+            android:textFontWeight="400"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintEnd_toEndOf="@id/course_title"
+            app:layout_constraintStart_toStartOf="@id/course_title"
+            app:layout_constraintTop_toBottomOf="@id/course_title"
+            tools:text="Освойте backend-разработку и программирование на Java, фреймворки asldjkfhlkjasdfh jkhlaksjdfhlk ashdflkhjfhasljkdfh" />
+
+        <TextView
+            android:id="@+id/course_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin16"
+            android:fontFamily="@font/roboto_medium"
+            android:textFontWeight="500"
+            android:textSize="@dimen/size16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/course_title"
+            app:layout_constraintTop_toBottomOf="@id/course_desc_text"
+            tools:text="999" />
+
+        <TextView
+            android:id="@+id/details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_details"
+            android:textColor="@color/greenColor"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/course_price_text"
+            app:layout_constraintEnd_toStartOf="@id/arrow_right"
+            app:layout_constraintTop_toTopOf="@id/course_price_text" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/margin16"
+            android:foregroundGravity="center"
+            android:src="@drawable/icon_arrow_right_short_fill"
+            app:layout_constraintBottom_toBottomOf="@id/details_text"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/details_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

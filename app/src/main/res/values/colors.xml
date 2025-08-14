@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textColor">#F2F2F3</color>
+    <color name="greenColor">#12B956</color>
+    <color name="blueColor">#2683ED</color>
+    <color name="orangeColorLight">#F98509</color>
+    <color name="orangeColorDark">#F95D00</color>
+    <color name="textColorSecondary">#B3B3B6</color>
+    <color name="dividerColor">#4D555E</color>
+    <color name="inputTextBackground">#32333A</color>
+    <color name="searchViewBgColor">#24252A</color>
+    <color name="funnelBgColor">#24252A</color>
+    <color name="viewsGreyBg">#32333A4D</color>
+</resources>

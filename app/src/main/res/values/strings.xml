@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="home_title">Главная</string>
+    <string name="favorites_title">Избранное</string>
+    <string name="profile_title">Аккаунт</string>
+    <string name="searchBarHint">Search courses...</string>
+    <string name="sorting_text">По дате добавления</string>
+    <string name="text_details">Подробнее</string>
+    <string name="course_price">%s ₽</string>
+    <string name="emailTitleText">Email</string>
+    <string name="emailHintText">example@gmail.com</string>
+    <string name="passwordTitleText">Пароль</string>
+    <string name="passwordHintText">Введите пароль</string>
+    <string name="resetPasswordTitleText">Повторить пароль</string>
+    <string name="resetPasswordHintText">Введите пароль ещё раз</string>
+    <string name="registerButtonText">Регистрация</string>
+    <string name="hasAccountText">Уже есть аккаунт?</string>
+    <string name="enterText">Войти</string>
+    <string name="enterButtonText">Вход</string>
+    <string name="noAccountText">Нет аккаунта?</string>
+    <string name="signInText">Регистрация</string>
+    <string name="forgotPasswordText">Забыл пароль</string>
+    <string name="login_error_text">Invalid email address or password</string>
+
+
+</resources>
