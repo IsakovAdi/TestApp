@@ -14,7 +14,7 @@ class CyrillicInputFilter : InputFilter {
     ): CharSequence? {
         for (i in start until end) {
             val character = source[i]
-            if (character.toInt() in 0x0400..0x04FF || character.toInt() in 0x0500..0x052F) {
+            if (character.code in 0x0400..0x04FF || character.toInt() in 0x0500..0x052F) {
                 return ""
             }
         }
